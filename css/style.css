@@ -57,3 +57,13 @@ background: #4A88F4;
 /*con esto aparece la manito como si hubiera un link*/
 cursor: pointer;
 }
+
+.tab{
+	border: 1px solid #1746A8;
+    padding:20px;
+
+}
+
+td{
+	color: black;
+}
