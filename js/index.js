@@ -9,7 +9,7 @@ $(document).ready(function () {
 	var user = {
 		name: '',
 		email: '',
-		ciudad:'',
+		city:'',
 	};
 
 	// escuchar el evento change y guardar el valor ingresado en el form
@@ -33,10 +33,35 @@ $(document).ready(function () {
 	    // users.push(user.name, user.email, user.city);
 
 		console.log(users);
+		
+		// esto es para vaciar la tabla y no se dupliquen las filas
+		$('tbody').empty()
+
+		// forEach es una iteracion solo para arreglos
+		users.forEach(function(user){
+
+		var row = '<tr>'+
+			'<td>' + user.name  + '</td>' +
+			'<td>' + user.email + '</td>' +
+			'<td>' + user.city  + '</td>' +
+		'</tr>';
+
+		// para agregar los datos del formaulario como hijo a la tabla
+		$('tbody').append(row);
+	});
+
+
+
 
 	});  
 
 	
+
+
+
+
+
+
  /*   $('#btnEnviar').on('click', function () {
 
 	$('#inputForm').on('submit',function(event){
